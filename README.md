@@ -2,34 +2,39 @@
 
 Welcome to the take home technical test, please read through this file before starting.
 
--   Create an API endpoint to fetch a single hotel by ID with reviews (if any).
+-   Create an API endpoint to fetch a single hotel by ID with reviews (if any).<br/>
+    You do not have to provide a full CRUD API
 
     -   **DO** return the response as JSON.
-    -   The response **SHOULD** only include:
+    -   The response **SHOULD ONLY** include:
 
-        -   The name of the hotel.
-        -   The hotel star rating.
-        -   The reviews of the hotel (if any).
+        -   The name of the hotel
+        -   The hotel star rating
+        -   The reviews (if any)
 
-    -   The endpoint should **NOT** return inactive hotels.
+    -   The endpoint **should NOT** return hotels that are not flagged as `Active`</br>
+        (see the section on hotel data below).
 
--   You will need to create the migrations and factories to seed dummy data.
+-   **DO** create database migrations and model factories for seeding dummy data.
+-   **DO** configure your project to run using:
+    - [Laravel Sail](https://laravel.com/docs/master/sail)
+    - either PostgreSQL or MySQL
 -   **DO** write tests.
+-   **DO** fork this repository and add commits with your changes
 
-## Hotels data will include
+## Hotels data should include
 
 -   Hotel name
--   Hotel star rating (between 1 - 5)
+-   [Hotel star rating](https://en.wikipedia.org/wiki/Hotel_rating) (between 1-5)
 -   Hotel address
--   Supplier - One of (Own, HotelBeds or SunHotels)
+-   Supplier (One of `Own`, `HotelBeds` or `SunHotels`)
 -   Active - Is the hotel active or not?
--   The date the record was created at and updated at
+-   The dates/times the record was created and last updated
+-   Zero or more reviews
 
-## Review data will include
+## Review data should include
 
-A hotel can have zero or more reviews.
-
--   Review title
--   Description of the review
+-   Review title/heading
+-   Text of the review
 -   Author
--   Date review was made
+-   Date of review
