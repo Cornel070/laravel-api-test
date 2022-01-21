@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\API\HotelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+
+/* 
+|
+| I'm grouping the API routes because all the endpoints will be 
+| feeding off the same controller and this reduces repitition of controller names.
+| It's also cleaner this way, I'd say.
+*/
+Route::controller(HotelController::class)->prefix('hotels')->group(function () {
+    Route::get('/{id}', 'show');
 });
