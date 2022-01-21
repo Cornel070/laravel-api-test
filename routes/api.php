@@ -23,5 +23,5 @@ use App\Http\Controllers\API\HotelController;
 | It's also cleaner this way, I'd say.
 */
 Route::controller(HotelController::class)->prefix('hotels')->group(function () {
-    Route::get('/{id}', 'show');
+    Route::get('/{id}', 'show')->name('hotel.show');
 });
