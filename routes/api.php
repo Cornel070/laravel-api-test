@@ -18,7 +18,7 @@ use App\Http\Controllers\API\HotelController;
 
 /* 
 |
-| I'm grouping the API routes because all the endpoints will be 
+| I'm grouping the API routes because all hotel endpoints will be 
 | feeding off the same controller and this reduces repitition of controller names.
 | It's also cleaner this way, I'd say.
 */

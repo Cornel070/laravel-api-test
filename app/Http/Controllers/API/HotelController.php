@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Http\Resources\HotelResource;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Hotel;
-use App\Http\Resources\HotelResource;
 
 class HotelController extends Controller
 {

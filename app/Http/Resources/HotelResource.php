@@ -14,7 +14,7 @@ class HotelResource extends JsonResource
      */
     public function toArray($request)
     {
-        if ($this->active) {
+        if ($this->resource && $this->active) {
             return [
                 'hotel_name'        => $this->hotel_name,
                 'hotel_star_rating' => $this->hotel_star_rating,
